@@ -25,7 +25,7 @@ Order of excetion - O(No of rows in the sheet) * No of Sheets
 Time taken on the test file over all the sheets - < 2 minutes
 Time taken on the main file over all the sheets - About 30 minutes
 
-Extra feeture:
+Extra feature:
 A section would be added if any of the ticker has an opening value = 0
 To handle problems caused by division by zero, %change of those tickers will be dispalyed as 0%
 However, such a case didn't happen yet in testing
