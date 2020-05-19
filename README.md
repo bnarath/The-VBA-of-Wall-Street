@@ -29,3 +29,7 @@ Extra feature:
 A section would be added if any of the ticker has an opening value = 0
 To handle problems caused by division by zero, %change of those tickers will be dispalyed as 0%
 However, such a case didn't happen yet in testing
+
+Also, this solution doesn't need the data to be sorted. It can work on data of any order
+
+Please note that due to the library limitations on MAC (vba scripting runtime), more sophisticated datatypes like dictionaries were not used. 
