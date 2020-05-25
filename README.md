@@ -43,10 +43,13 @@ Screenshots of results:
   - If any ticker has Opening Value = 0, Percent Change becomes Infinity and results in Division by Zero Error
   - Under the occurance of division by zero, Percent Change is taken as 0% and corresponding tickers are logged in the sheet  and highlighed
   - **One Ticker (PNTL) has this problem - happens in 2015 and 2014 years**
+  <div style="text-align:center"><img src="images/Div_by_zero_handling.png" width=400></div>
+  
 - **Code returns the total run time taken**
-<div style="text-align:center"><img src="images/Solution1_time.png"></div>
 
-**As this solution uses arrays that needs redimensioning, it takes about 36 minutes to run**
+  <div style="text-align:center"><img src="images/Solution1_time.png" width=400></div>
+
+**As this solution uses arrays and redimensioning, it takes about 36 minutes to run**
 
 
 #Solution 2:
