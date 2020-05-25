@@ -72,7 +72,7 @@ Note the Start Time
 Loop through each worksheet(2016, 2015, 2014):
 
       Activate the current worksheet
-      Sort the entire sheet using inbuilt function **Sort**
+      Sort the entire sheet using inbuilt function Sort
       Find the Last Row
   
       #Initialize
@@ -86,7 +86,7 @@ Loop through each worksheet(2016, 2015, 2014):
           Calculate the Yearly Change
           Increment the Error Count if any Div by Zero Error (Mark the corresponding Ticker in the sheet)
           Calculate the Percentage Change 
-          Calculate the Total Stock Volume using inbuilt function **Sum**
+          Calculate the Total Stock Volume using inbuilt function Sum
           Update the summary row in the sheet
         
           #Keep track of the Toppers and Floppers as below
@@ -123,7 +123,83 @@ This solution also includes the features incorporated in Solution 1
  <div style="text-align:center"><img src="images/Solution2_time.png" width=400></div>
             
     
+# Solution 3:
+
+VBA code - <a href=wall_streat_challenge_solution3.vbs>wall_streat_challenge_solution3.vbs</a>
+- Run the subroutine Stock_Analysis
+
+Screenshots of results:
+- <a href=Result_screenshot_2016_Solution3.png>Result_screenshot_2016_Solution3.png</a>
+- <a href=Result_screenshot_2015_Solution3.png>Result_screenshot_2015_Solution3.png</a>
+- <a href=Result_screenshot_2014_Solution3.png>Result_screenshot_2014_Solution3.png</a>
+
+Just like Solution2, this solution also has only two subroutines; **Stock_Analysis** consists of the main logic and **Formatting** carries out the required formatting. The main logic of Stock_Analysis is as follows:
+
+## Algorithm
+
+```
+Note the Start Time
+
+Loop through each worksheet(2016, 2015, 2014):
+
+      Activate the current worksheet
+      Sort the entire sheet using inbuilt function Sort
+      Find the Last Row
   
+      #Initialize
+          The variables Count (total number of unique tickers) As 0, Error Count (Any Div by Zero?) As 0, Total Stock Volume As 0
+          First Instance As 2 (Row Corresponds to the First Ticker)
+          Topper Flopper Names - Array Initialized: Pos0 - Ticker with Greatest% Increase, Pos1 - Ticker with Greatest%   Decrease, Pos2 - Ticker with Greatest Stock Volume
+          Topper Flopper Values - Array Initialized: Pos0 - Greatest% Increase, Pos1 - Greatest% Decrease, Pos2 - Greatest Stock Volume
+  
+      For Row Index = 2 To  Last Row:
+          If current row ticker name  NOT EQUAL TO  next row ticker name
+              Calculate the Yearly Change <- Close Value at current row - Open Value at First Instance
+              Increment the Error Count if any Div by Zero Error (Mark the corresponding Ticker in the sheet)
+              Calculate the Percentage Change <- Yearly Change / Open Value at First Instance
+              Total Stock Volume <- Total Stock Volume + Stock Volume at the current row
+              Update the summary row in the sheet
+              
+              Update the First Instance <- Row Index + 1
+              Reset the Total Stock Volume <- 0
+              
+              Increment the Count (+1)
+              #Keep track of the Toppers and Floppers as below
+              If Count = 1
+                  Topper Flopper Names <- Names of the  first Ticker as a base for further comparison
+                  Topper Flopper Values <- Values of the  first Ticker as a base for further comparison
+              Else:
+                  Update Topper Flopper Names and Topper Flopper Values
+                  If Current Perc Change > Topper Flopper Values[Pos0]:
+                    Topper Flopper Values[Pos0] <- Current Perc Change
+                    Topper Flopper Names[Pos0] <- Current Ticker
+                  If Current Perc Change < Topper Flopper Values[Pos1]:
+                    Topper Flopper Values[Pos1] <- Current Perc Change
+                    Topper Flopper Names[Pos1] <- Current Ticker
+                  If Current Total Stock Volume > Topper Flopper Values[Pos2]:
+                    Topper Flopper Values[Pos2] <- Current Total Stock Volume
+                    Topper Flopper Names[Pos2] <- Current Ticker
+              End If
+              
+          Else
+              Total Stock Volume <- Total Stock Volume + Stock Volume at the current row
+          EndIf
+      Next Row Index
+          
+     
+      Update the sheet with Topper Flopper Names and Values
+      Call Formatting Subroutine for Formatting
+      
+End of the current worsksheet
+
+Note the total time elapsed and notify in a messagebox
+```
+This solution also includes the features incorporated in Solution 1 and 2
+  - Track and highlight tickers with opening value zero
+  - Outputs the total run time
+ This runs super fast, as no inbuilt functions like find in solution2 (other than sort function) and array redimensioning (as used in Solution1)
+ 
+ <div style="text-align:center"><img src="images/Solution3_time.png" width=400></div>
 
 
 
