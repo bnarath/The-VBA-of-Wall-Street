@@ -24,13 +24,13 @@ Use of  VBA scripting to analyze real stock market data.
 
 
 # Solution 1:
-VBA code - wall_streat_challenge_solution1.vbs
-Run the subroutine Stock_Analysis
+VBA code - <a href=wall_streat_challenge_solution1.vbs>wall_streat_challenge_solution1.vbs</a>
+- Run the subroutine Stock_Analysis
 
 Screenshots of results:
-- Result_screenshot_2016_Solution1.png
-- Result_screenshot_2015_Solution1.png
-- Result_screenshot_2016_Solution1.png
+- <a href=Result_screenshot_2016_Solution1.png>Result_screenshot_2016_Solution1.png</a>
+- <a href=Result_screenshot_2015_Solution1.png>Result_screenshot_2015_Solution1.png</a>
+- <a href=Result_screenshot_2014_Solution1.png>Result_screenshot_2014_Solution1.png</a>
 
 <div style="text-align:center"><img src="images/Solution1.png"></div>
 
