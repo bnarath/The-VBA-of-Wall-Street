@@ -27,6 +27,11 @@ Use of  VBA scripting to analyze real stock market data.
 VBA code - wall_streat_challenge_solution1.vbs
 Run the subroutine Stock_Analysis
 
+Screenshots of results:
+- Result_screenshot_2016_Solution1.png
+- Result_screenshot_2015_Solution1.png
+- Result_screenshot_2016_Solution1.png
+
 <div style="text-align:center"><img src="images/Solution1.png"></div>
 
 
@@ -42,6 +47,7 @@ Run the subroutine Stock_Analysis
 <div style="text-align:center"><img src="images/Solution1_time.png"></div>
 
 **As this solution uses arrays that needs redimensioning, it takes about 36 minutes to run**
+
 
 #Solution 2:
 VBA code - wall_streat_challenge_solution2.vbs
