@@ -119,7 +119,8 @@ Note the total time elapsed and notify in a messagebox
 This solution also includes the features incorporated in Solution 1
   - Track and highlight tickers with opening value zero
   - Outputs the total run time
- As it includes the inbuilt find function to find the last index, it takes a lot of time to run.
+ As it includes the inbuilt find function to find the last index, it takes a lot of time (about 114 minutes) to run.
+ <div style="text-align:center"><img src="images/Solution2_time.png" width=400></div>
             
     
   
