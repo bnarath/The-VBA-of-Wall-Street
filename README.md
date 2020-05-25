@@ -108,9 +108,12 @@ Loop through each worksheet(2016, 2015, 2014):
             
           Update the Row Index as Last Instance + 1
       End of while Loop
+      
       Update the sheet with Topper Flopper Names and Values
       Call Formatting Subroutine for Formatting
+      
 End of the current worsksheet
+
 Note the total time elapsed and notify in a messagebox
 ```
 
