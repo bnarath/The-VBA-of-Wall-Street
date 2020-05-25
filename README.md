@@ -128,7 +128,7 @@ This solution also includes the features incorporated in Solution 1
  <div style="text-align:center"><img src="images/Solution2_time.png" width=400></div>
             
     
-# Solution 3:
+# <span id = the_best>Solution 3</span>:
 
 VBA code - <a href=wall_streat_challenge_solution3.vbs>wall_streat_challenge_solution3.vbs</a>
 - Run the subroutine Stock_Analysis
@@ -209,5 +209,6 @@ This solution also includes the features incorporated in Solution 1 and 2
 
 **Please note that the time taken for Solution 2 and 3 will vary based on how shuffled the dataset gets. Both the solutions use inbuilt sort function**
 
+# Conclusion
 
-
+**Having going through all the three solutions, considering the run time as a performance factor, [Solution 3](#the_best) is picked as it runs faster than others**
