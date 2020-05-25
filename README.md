@@ -23,14 +23,14 @@ Use of  VBA scripting to analyze real stock market data.
 - Make the appropriate adjustments to your VBA script that will allow it to run on every worksheet, i.e., every year, just by running the VBA script once.
 
 
-#Solution 1:
-VBA code - wall_streat_challenge_solution1.vbs
-Run the subroutine Stock_Analysis
+# Solution 1:
+VBA code - <a href=wall_streat_challenge_solution1.vbs>wall_streat_challenge_solution1.vbs</a>
+- Run the subroutine Stock_Analysis
 
 Screenshots of results:
-- Result_screenshot_2016_Solution1.png
-- Result_screenshot_2015_Solution1.png
-- Result_screenshot_2016_Solution1.png
+- <a href=Result_screenshot_2016_Solution1.png>Result_screenshot_2016_Solution1.png</a>
+- <a href=Result_screenshot_2015_Solution1.png>Result_screenshot_2015_Solution1.png</a>
+- <a href=Result_screenshot_2014_Solution1.png>Result_screenshot_2014_Solution1.png</a>
 
 <div style="text-align:center"><img src="images/Solution1.png"></div>
 
@@ -43,10 +43,13 @@ Screenshots of results:
   - If any ticker has Opening Value = 0, Percent Change becomes Infinity and results in Division by Zero Error
   - Under the occurance of division by zero, Percent Change is taken as 0% and corresponding tickers are logged in the sheet  and highlighed
   - **One Ticker (PNTL) has this problem - happens in 2015 and 2014 years**
+  <div style="text-align:center"><img src="images/Div_by_zero_handling.png" width=400></div>
+  
 - **Code returns the total run time taken**
-<div style="text-align:center"><img src="images/Solution1_time.png"></div>
 
-**As this solution uses arrays that needs redimensioning, it takes about 36 minutes to run**
+  <div style="text-align:center"><img src="images/Solution1_time.png" width=400></div>
+
+**As this solution uses arrays and redimensioning, it takes about 36 minutes to run**
 
 
 #Solution 2:
