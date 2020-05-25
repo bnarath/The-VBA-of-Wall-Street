@@ -206,7 +206,7 @@ Sub Stock_Analysis()
                     Cells(6, 16).Interior.ColorIndex = 6
                 End If
                    'Fill the Error Tickers where OV is 0 (Div by Zero)
-                    Cells(7 + ErrCount, 16).Value = AGG(0)(i).Value
+                    Cells(7 + ErrCount, 16).Value = AGG(0)(i)
                     Cells(7 + ErrCount, 16).Interior.ColorIndex = 6
                     ErrCount = ErrCount + 1
 
