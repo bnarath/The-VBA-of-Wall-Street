@@ -116,7 +116,10 @@ End of the current worsksheet
 
 Note the total time elapsed and notify in a messagebox
 ```
-
+This solution also includes the features incorporated in Solution 1
+  - Track and highlight tickers with opening value zero
+  - Outputs the total run time
+ As it includes the inbuilt find function to find the last index, it takes a lot of time to run.
             
     
   
