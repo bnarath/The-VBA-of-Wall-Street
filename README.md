@@ -23,7 +23,7 @@ Use of  VBA scripting to analyze real stock market data.
 - Make the appropriate adjustments to your VBA script that will allow it to run on every worksheet, i.e., every year, just by running the VBA script once.
 
 
-#Solution 1:
+# Solution 1:
 VBA code - wall_streat_challenge_solution1.vbs
 Run the subroutine Stock_Analysis
 
