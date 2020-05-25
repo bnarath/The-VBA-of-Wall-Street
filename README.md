@@ -52,9 +52,69 @@ Screenshots of results:
 **As this solution uses arrays and redimensioning, it takes about 36 minutes to run**
 
 
-#Solution 2:
-VBA code - wall_streat_challenge_solution2.vbs
+# Solution 2:
 
+VBA code - <a href=wall_streat_challenge_solution2.vbs>wall_streat_challenge_solution2.vbs</a>
+- Run the subroutine Stock_Analysis
+
+Screenshots of results:
+- <a href=Result_screenshot_2016_Solution2.png>Result_screenshot_2016_Solution2.png</a>
+- <a href=Result_screenshot_2015_Solution2.png>Result_screenshot_2015_Solution2.png</a>
+- <a href=Result_screenshot_2014_Solution2.png>Result_screenshot_2014_Solution2.png</a>
+
+This solution has only two subroutines; **Stock_Analysis** consists of the main logic and **Formatting** carries out the required formatting. The main logic of Stock_Analysis is as follows:
+
+## Algorithm
+
+Note the Start Time
+
+**Loop through each worksheet(2016, 2015, 2014):**
+
+      Activate the current worksheet
+      Sort the entire sheet using inbuilt function **Sort**
+      Find the Last Row
+  
+      **Initialize**
+        The variables Count (total number of unique tickers) As 0, Error Count (Any Div by Zero?) As 0
+        Row Index As 2 (skip the header row)
+        Topper Flopper Names - Array Initialized: Pos0 - Ticker with Greatest% Increase, Pos1 - Ticker with Greatest%   Decrease, Pos2 - Ticker with Greatest Stock Volume
+        Topper Flopper Values - Array Initialized: Pos0 - Greatest% Increase, Pos1 - Greatest% Decrease, Pos2 - Greatest Stock Volume
+  
+      **While Row Index <= Last Row:**
+        Find the row corresponds to the **Last Instance** of that Ticker using inbuilt function **Find**
+        Calculate the Yearly Change
+        Increment the Error Count if any Div by Zero Error (Mark the corresponding Ticker in the sheet)
+        Calculate the Percentage Change 
+        Calculate the Total Stock Volume using inbuilt function **Sum**
+        Update the summary row in the sheet
+        
+        **Keep track of the Toppers and Floppers as below**
+        If Count = 0
+            Topper Flopper Names <- Names of the  first Ticker as a base for further comparison
+            Topper Flopper Values <- Values of the  first Ticker as a base for further comparison
+        Else:
+            Update Topper Flopper Names and Topper Flopper Values
+            If Current Perc Change > Topper Flopper Values[Pos0]:
+               Topper Flopper Values[Pos0] <- Current Perc Change
+               Topper Flopper Names[Pos0] <- Current Ticker
+            If Current Perc Change < Topper Flopper Values[Pos1]:
+               Topper Flopper Values[Pos1] <- Current Perc Change
+               Topper Flopper Names[Pos1] <- Current Ticker
+            If Current Total Stock Volume > Topper Flopper Values[Pos2]:
+               Topper Flopper Values[Pos2] <- Current Total Stock Volume
+               Topper Flopper Names[Pos2] <- Current Ticker
+        End If
+            
+        **Update the Row Index as Last Instance + 1**
+      End of while Loop
+      Update the sheet with Topper Flopper Names and Values
+      Call Formatting Subroutine for Formatting
+**End of the current worsksheet**
+Note the total time elapsed and notify in a messagebox
+
+            
+    
+  
 
 
 
