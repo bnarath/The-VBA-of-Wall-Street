@@ -1,37 +1,25 @@
-# VBA-challenge
-VBA-challenge stock market data
+# The VBA of Wall Street
+Use of  VBA scripting to analyze real stock market data. 
 
-The files uploaded
-1. wall_streat_challenge.vbs (macro to run - VBAProject.Module1.Stock_Analysis)
-2. Screenshots of results corresponding to 2016, 2015 and 2014
-3. Excel sheet with result
+<div style="text-align:center"><img src="images/stockmarket.jpg"></div>
 
-Note:- 
-Logic is modularised as functions and subroutines
+- Create a script that will loop through all the stocks for one year and output the following summary information.
 
-Main Subroutine
-Stock_Analysis - In Module1
+  - The ticker symbol.
 
-Supporting Subroutines and functions called within the main subroutine
-Functions
- GetAgg
- InArray
- WhereInArray
-Subroutine
- Formatting
- 
+  - Yearly change from opening price at the beginning of a given year to the closing price at the end of that year.
 
-Order of excetion - O(No of rows in the sheet) * No of Sheets
+  - The percent change from opening price at the beginning of a given year to the closing price at the end of that year.
 
-Time taken on the test file over all the sheets - < 2 minutes
+  - The total stock volume of the stock.
 
-Time taken on the main file over all the sheets - About 30 minutes
+- Do conditional formatting that will highlight positive change in green and negative change in red.
 
-Extra feature:
-A section would be added if any of the ticker has an opening value = 0
-To handle problems caused by division by zero, %change of those tickers will be dispalyed as 0%
-However, such a case didn't happen yet in testing
+- The olution will also be able to return the stock with the "Greatest % increase", "Greatest % decrease" and "Greatest total volume". The solution will look as follows:
 
-Also, this solution doesn't need the data to be sorted. It can work on data of any order
 
-Please note that due to the library limitations on MAC (vba scripting runtime), more sophisticated datatypes like dictionaries were not used. 
+<div style="text-align:center"><img src="images/hard_solution.png"></div>
+
+- Make the appropriate adjustments to your VBA script that will allow it to run on every worksheet, i.e., every year, just by running the VBA script once.
+
+
