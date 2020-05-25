@@ -197,11 +197,12 @@ Note the total time elapsed and notify in a messagebox
 This solution also includes the features incorporated in Solution 1 and 2
   - Track and highlight tickers with opening value zero
   - Outputs the total run time
- This runs super fast, as no inbuilt functions like find in solution2 (other than sort function) and array redimensioning (as used in Solution1)
+
+**This runs super fast (0.65 minutes)!!!, as no inbuilt functions like find in solution2 (other than sort function) and array redimensioning (as used in Solution1)**
  
  <div style="text-align:center"><img src="images/Solution3_time.png" width=400></div>
 
-
+**Please note that the time taken for Solution 2 and 3 will vary based on how shuffled the dataset gets. Both the solutions use inbuilt sort function**
 
 
 
