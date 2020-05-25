@@ -29,14 +29,17 @@ Run the subroutine Stock_Analysis
 
 <div style="text-align:center"><img src="images/Solution1.png"></div>
 
+
 - **This solution does not use any workbook application function**
-- It loops through the entire data once, get the summary and loops through the small summary once to get the toppers and floppers. 
-- This soltion works even if the data is not sorted. 
-- It loops through all the sheets and gives the result. 
-- One extra feature is added to keep track of division by zero error
+- **It loops through the entire data once, get the summary and loops through the small summary once to get the toppers and floppers.** 
+- **This solution works even if the data is not sorted.**
+- It loops through all the sheets and gives the result.
+- **One extra feature is added to keep track of division by zero error
   - If any ticker has Opening Value = 0, Percent Change becomes Infinity and results in Division by Zero Error
   - Under the occurance of division by zero, Percent Change is taken as 0% and corresponding tickers are logged in the sheet  and highlighed
-  - One Ticker (PNTL) has this problem - happens in 2015 and 2014 years
+  - **One Ticker (PNTL) has this problem - happens in 2015 and 2014 years
+- **Code returns the total run time taken
+
 
 As this solution uses arrays that needs redimensioning, it takes about an hour to run. Hence, I don't recommend this one
 
